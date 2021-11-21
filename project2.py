@@ -24,5 +24,5 @@ class Project2Spider(scrapy.Spider):
 
         yield
         {
-                print(title)
+                print("The title of page is: \n", title, "\nand jobs posted are: \n", JobTitle, "\Post Time is: \n", PostTime)
         }
