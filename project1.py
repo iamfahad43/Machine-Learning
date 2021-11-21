@@ -4,7 +4,7 @@ import scrapy
 class Project1Spider(scrapy.Spider):
     name = 'project1'
     allowed_domains = ['https://www.sellbrite.com/blog/shopify-experts/?utm_source=google&utm_medium=cpc&utm_campaign=11614748316&gclid=Cj0KCQiA4feBBhC9ARIsABp_nbUxm5SNY3OVMLIJzsgaiYX2pVCRR0UwarLmldkQjb5yFvgVRXDRBMcaAmemEALw_wcB']
-    start_urls = ['http://https://www.sellbrite.com/blog/shopify-experts/?utm_source=google&utm_medium=cpc&utm_campaign=11614748316&gclid=Cj0KCQiA4feBBhC9ARIsABp_nbUxm5SNY3OVMLIJzsgaiYX2pVCRR0UwarLmldkQjb5yFvgVRXDRBMcaAmemEALw_wcB/']
+    start_urls = ['http://www.sellbrite.com/blog/shopify-experts/?utm_source=google&utm_medium=cpc&utm_campaign=11614748316&gclid=Cj0KCQiA4feBBhC9ARIsABp_nbUxm5SNY3OVMLIJzsgaiYX2pVCRR0UwarLmldkQjb5yFvgVRXDRBMcaAmemEALw_wcB/']
 
     def parse(self, response):
         title = response.css("h1::text").get()        
