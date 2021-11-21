@@ -4,7 +4,7 @@ import scrapy
 class Project2Spider(scrapy.Spider):
     name = 'project2'
     allowed_domains = ['www.realpython.github.io']
-    start_urls = ['http://https://realpython.github.io/fake-jobs//']
+    start_urls = ['http://realpython.github.io/fake-jobs//']
 
     def parse(self, response):
         title = response.css("h1::text").get()
