@@ -16,11 +16,7 @@ class CrawlShoeShineSpider(CrawlSpider):
         #print(response)
         yield{
             'Title': response.xpath("//span[@class='a-size-large product-title-word-break']/text()").get()
-            #'Rating': response.xpath("((//span[@id='acrCustomerReviewText'])[1])/text()").get()
-            #'Store': response.xpath("//a[@id='bylineInfo']/text()").get()
+            'Rating': response.xpath("((//span[@id='acrCustomerReviewText'])[1])/text()").get()
+            'Store': response.xpath("//a[@id='bylineInfo']/text()").get()
         }
-        #item = {}
-        #item['domain_id'] = response.xpath('//input[@id="sid"]/@value').get()
-        #item['name'] = response.xpath('//div[@id="name"]').get()
-        #item['description'] = response.xpath('//div[@id="description"]').get()
-        #return item
+        
